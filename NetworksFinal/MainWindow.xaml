@@ -1,0 +1,39 @@
+﻿<Window x:Class="NetworksFinal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NetworksFinal"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="MainWindow" Height="400" Width="900">
+    <DockPanel Name="Main_DocPanel" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" LastChildFill="True">
+        <Grid Name="UserEntry_Grid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <TextBlock Text="URL/IP Address" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" FontSize="15"/>
+            <TextBox Name="WebAddress" Grid.Column="1" Height="30" Margin="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontSize="15"/>
+            <Button Name="Submit_btn" Content="Submit" Grid.Column="2" Width="50" Height="20" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="11" Click="submit_btn_Click"/>
+
+            <TextBlock Name="HeatMapInstructions" Grid.Row="1" Grid.Column="0" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Button Name="ThreadTest" Content="Heat Data" Grid.Column="0" Grid.Row="1" Width="70" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Click="getHeatData_btn_Click"/>
+
+            <TextBlock Name="data" TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        </Grid>
+
+
+        <!--<WebBrowser Name="MapDisplay"/>-->
+
+   
+        
+    </DockPanel>
+</Window>
